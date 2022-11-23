@@ -1,7 +1,7 @@
 <?php
 namespace Dunhakdis\HelloPackage;
 
-class HelloPackage {
+class Hello {
 
     public function __construct() {
         
