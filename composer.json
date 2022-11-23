@@ -1,0 +1,8 @@
+{
+    "name": "dunhakdis1/hello-package",
+    "description": "Testing package..",
+    "license": "GPL-1.0-only",
+    "require": {
+        "php": ">=5.6"
+    }
+}
