@@ -1,5 +1,5 @@
 <?php
-namespace Dunhakdis\MiddleWare;
+namespace WhenThen\MiddleWare;
 
 /**
  * A sample WordPress add_action/do_action event 
