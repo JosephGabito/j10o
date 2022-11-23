@@ -1,13 +1,13 @@
 {
-    "name": "dunhakdis/hello-package",
-    "description": "Testing package..",
-    "license": "GPL-1.0-only",
+    "name": "j10o/whenthen",
+    "description": "A drop-in package for wrapping WordPress' add_action and do_action(soon)",
+    "license": "GPL-3.0-only",
     "require": {
         "php": ">=5.6"
     },
     "autoload": {
         "psr-4": {
-            "Dunhakdis\\": "src/"
+            "WhenThen\\": "src/"
         }
     }
 }
