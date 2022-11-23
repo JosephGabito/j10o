@@ -2,6 +2,14 @@
 
 A drop-in package for wrapping WordPress' add_action and do_action(soon) :octocat:
 
+### A Glimpse
+```php
+$wp_event = new \WhenThen\MiddleWare\Event();
+$wp_event->when( $hook = array( 'name' => 'wp' ) )->then( function(){
+    echo '𝙷𝚎𝚕𝚕𝚘, 𝚆𝚘𝚛𝚍𝙿𝚛𝚎𝚜𝚜';
+});
+
+```
 ### Basic usage
 
 #### Via composer
