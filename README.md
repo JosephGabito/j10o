@@ -23,7 +23,7 @@ In your plugin's main file include the vendor autoload.
 
 ```php
 // Require Composer's autoload file.
-require __DIR__ . '/vendor/autoload.php';`
+require __DIR__ . '/vendor/autoload.php';
 
 // Create new event object.
 $wp_event = new \WhenThen\MiddleWare\Event();
