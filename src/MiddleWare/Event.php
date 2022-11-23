@@ -6,36 +6,33 @@ namespace Dunhakdis\MiddleWare;
  */
 class Event {
 
-    protected $name = '';
-    protected $accepted_args = 0;
-    protected $priority = 10;
+    protected $args = array();
+
     protected $callable = null;
 
-    public function set_name( $name ) {
-        $this->name = $name;
+    public function when( $args = array() ) {
+
+        $this->args = array(
+            'name' => $args['name'],
+            'priority' => $args['priority'],
+            'num_args' => $args['num_args']
+        );
+
+        return $this;
+
     }
 
-    public function set_accepted_args( $num_args = 0 ) {
-        $this->num_args = 0;
-    }
+    public function then( callable $func ) {
 
-    public function set_priority( $priority = 10 ) {
-        $this->priority = 10;
-    }
-
-    public function set_callable( callable $func = null ) {
         $this->callable = $func;
+
+        add_action( $this->args['name'], $this->callable, $this->args['priority'], $this->args['num_args'] );
+
+        return $this;
+
     }
 
-    public function emit() {
-
-        add_action( $this->name, $this->callable, $this->priority, $this->accepted_args );
-
-    }
-
-    public function dispatch( $args ) {
-
-        do_action( $this->name, $args );
+    public function _catch( callable $catch ) {
 
     }
 
